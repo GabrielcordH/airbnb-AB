@@ -15,4 +15,8 @@ My goal here is to find the most important variables that can positively and neg
 ---  
 
 ## Methodology
-
+The preprocessing was made by removing some duplicate entrys and filling the NMAR missing occurrences, specially in the review section where hosts with zero reviews in which listed as missing data, and the same for house rules. I also removed some non-helpful features like country and license.
+The feature engineering was made by in three steps:
+- Used sklearn to find the most common terms in the house rules feature, ignoring stop words, then used re to search the hous_rules feature for keywords such as pet friendly, no smoking, no parties, etc., thus creating a list of dummy variables
+- Used Geopandas to calculate the minimum absolute distance from each airbnb to the Central Park, one of the most expensive areas in NYC. The GEOJSON of Central Park was acquired from data.gov (https://catalog.data.gov/dataset/national-parks-c0904/resource/3ddcf942-ddf1-4e3d-9d70-0432b6029f45)
+- Used GeoPandas to calculate the minimum absolute distance to the nearest subway station The GEOJSON of subway stations was acquired from data.gov (https://catalog.data.gov/dataset/mta-subway-stations)
