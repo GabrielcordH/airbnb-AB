@@ -22,7 +22,7 @@ The feature engineering was made by in three steps:
 - Used Geopandas to calculate the minimum absolute distance from each airbnb to the Central Park, one of the most expensive areas in NYC. The GEOJSON of Central Park was acquired from data.gov (https://catalog.data.gov/dataset/national-parks-c0904/resource/3ddcf942-ddf1-4e3d-9d70-0432b6029f45)
 - Used GeoPandas to calculate the minimum absolute distance to the nearest subway station The GEOJSON of subway stations was acquired from data.gov (https://catalog.data.gov/dataset/mta-subway-stations)
 
-The Ab tests were done using this parameters 
-- Statistical Power ($\beta$0 -> 80%
+The AB tests were done using this parameters 
+- Statistical Power ($\beta$) -> 80%
 - $\alpha$ -> 5%
 - Minimum sample size: N = $\frac{(\sigma^2_{con} + \sigma^2_{exp})(z_{1-\frac{\alpha}{2}} + z_{1-\beta})^2}{\delta^2}$
